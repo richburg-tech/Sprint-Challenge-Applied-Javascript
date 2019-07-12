@@ -19,48 +19,55 @@
 // Create a card for each of the articles and add the card to the DOM.
 
 const cardsContainer = document.querySelector('.cards-container')
+// const articlesArray = [
+//     'javascript',
+//     'bootstrap',
+//     'technology',
+//     'jquery',
+//     'node',
+// ];
+
 const articlesArray = [
-    'javascript',
-    'bootstrap',
-    'technology',
-    'jquery',
-    'node',
-];
+    axios.get(`https://lambda-times-backend.herokuapp.com`)
 
-articlesArray.forEach(user => {
-    axios.get(`https://lambda-times-backend.herokuapp.com/articles`)
-    .then(data => {
-        const info = data.data
-        const displayInfo = createNewCard(info)
-        console.log(info)
-        createNewCard(info)
-        cardsContainer.appendChild(displayInfo)
-    })
-
-    .catch(error => {
-        console.log('fix me!')
-    })
-})
 
 function createNewCard(cardData) {
+
+    articlesArray.forEach(articles => {
+        // axios.get(`https://lambda-times-backend.herokuapp.com/articles`)
+        articlesArray.then(data => {
+            console.log('data',data)
+            const info = data.data
+            const displayInfo = createNewCard(info)
+            console.log(info)
+            createNewCard(info)
+            cardsData.appendChild(displayInfo)
+        })
+    
+        .catch(error => {
+            console.log('fix me!', error)
+        })
+    })
+    
     // creating elements
     const card = document.createElement('div')
     const headline = document.createElement ('')
     const authorPhoto = document.createElement('')
     const authorName = document.createElement('')
     // element structure 
-    card.appendChild()
-    card.appendChild()
-    card.appendChild()
-    card.appendChild()
-
+    articlesArray.appendChild()
+    articlesArray.appendChild()
+    articlesArray.appendChild()
+    articlesArray.appendChild()
+    
 
     // setting the styles
 
-    card.classList.add('card')
-    .classList.add()
-    .classList.add()
-    .classList.add()
+    cardData.classList.add('card')
+    headline.classList.add('headline')
+    author.classList.add('author')
+    img.classList.add('img-container')
+    by.classList.add('By')
 
     return card 
 
