@@ -9,8 +9,8 @@
 //    <div class="tab">topic here</div>
 
 
-const tabs = document.querySelector('.tabs')
-console.log('Yooo', tabs)
+const createTabs = document.querySelector('.tabs')
+console.log('Yooo', createTabs)
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
    .then((data) =>{

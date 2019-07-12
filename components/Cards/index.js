@@ -17,3 +17,28 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+const articlesArray = {
+    'javascript',
+    'bootstrap',
+    'technology',
+    'jquery',
+    'node',
+
+};
+
+articlesArray.forEach(user => {
+    axios.get('https://lambda-times-backend.herokuapp.com/articles/$(articles)`)
+    .then(data => {
+        const info = data.data
+        console.log(info)
+    })
+    .catch(error => {
+        console.log('fix me!')
+    })
+})
+
+
+// function createLambdaBE(articles){
+
+// }

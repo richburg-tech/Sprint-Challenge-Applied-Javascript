@@ -12,22 +12,22 @@
 function Header(date,lambdatimes,temp) {
 const headerContainer = document.createElement('div');
 
-const lambdatimes = document.createElement('h1');
-lambdatimes.textContent = lambdatimes
-const temp = document.createElement('span');
-temp.textContent = '98°'
+const title= document.createElement('h1');
+title.textContent = lambdatimes
+const temperature = document.createElement('span');
+temperature.textContent = '98°'
 
-headerContainer.appendChild(lambdatimes)
+headerContainer.appendChild(title)
 headerContainer.appendChild(date)
 headerContainer.appendChild(temp)
 
 headerContainer.classList.add('headerContainer')
-headerContainer.classList.add('lambdatimes')
+headerContainer.classList.add('title')
 headerContainer.classList.add('date')
-temp.classList.add('temp')
+temperature.classList.add('temp')
 
 
-temp.addEventListener('load', function toggle(event){
+temperature.addEventListener('load', function toggle(event){
     headerContainer.classList.toggle('headerContainer-open')
   })
   return headerContainer;
