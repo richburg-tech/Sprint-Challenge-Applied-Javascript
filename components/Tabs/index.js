@@ -14,5 +14,15 @@ console.log('Yooo', tabs)
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
    .then((data) =>{
+    // gives results from the server
+    console.log('response', data)
+    let tabs = data.data
+    console.log('Yooo', tabs)
+    const element =createTabs(tabs)
+    console.log('Rip Nip the Great', tabs)
+    tabs.appendChild(element)
+   })
 
+   .catch((error) => {
+       console.log('Error', error);
    })
