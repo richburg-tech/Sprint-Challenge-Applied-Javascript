@@ -48,4 +48,20 @@ function createNewCard(cardData) {
     const headline = document.createElement ('')
     const authorPhoto = document.createElement('')
     const authorName = document.createElement('')
+    // element structure 
+    card.appendChild()
+    card.appendChild()
+    card.appendChild()
+    card.appendChild()
+
+
+    // setting the styles
+
+    card.classList.add('card')
+    .classList.add()
+    .classList.add()
+    .classList.add()
+
+    return card 
+
 }
