@@ -42,3 +42,10 @@ articlesArray.forEach(user => {
     })
 })
 
+function createNewCard(cardData) {
+    // creating elements
+    const card = document.createElement('div')
+    const headline = document.createElement ('')
+    const authorPhoto = document.createElement('')
+    const authorName = document.createElement('')
+}
