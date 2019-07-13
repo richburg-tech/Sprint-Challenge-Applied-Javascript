@@ -18,23 +18,44 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
-const cardsContainer = document.querySelector('.cards-container')
-// const articlesArray = [
-//     'javascript',
-//     'bootstrap',
-//     'technology',
-//     'jquery',
-//     'node',
-// ];
+     const articlesArray = [
+        'javascript',
+        'bootstrap',
+        'technology',
+        'jquery',
+        'node',
+];
 
-const articlesArray = [
-    axios.get(`https://lambda-times-backend.herokuapp.com`)
+function createNewCard(card-container, headline, author, img-container) {
+    const card-container= document.createElement('card');
+    const headline = document.createElement ('articles')
+    const img-container = document.createElement('img-container')
+    const author= document.createElement('By')
 
+    card-container.textContent = ('javascript')
+    card-container.textContent = ('bootstrap')
+    card-container.textContent = ('technology')
+    card-container.textContent = ('jquery')
+    card-container.textContent = ('node')
 
-function createNewCard(cardData) {
+    card.appendChild(javascript)
+    card.appendChild(bootstrap)
+    card.appendChild(technology)
+    card.appendChild(jquery)
+    card.appendChild(node
 
-    articlesArray.forEach(articles => {
-        // axios.get(`https://lambda-times-backend.herokuapp.com/articles`)
+        
+        
+  cardData.classList.add('card')
+    headline.classList.add('headline')
+    author.classList.add('author')
+    img.classList.add('img-container')
+    by.classList.add('By')
+
+    
+
+    axios.get(`https://lambda-times-backend.herokuapp.com/articles`);
+    articlesArray.forEach(articlesArray => {
         articlesArray.then(data => {
             console.log('data',data)
             const info = data.data
@@ -50,24 +71,14 @@ function createNewCard(cardData) {
     })
     
     // creating elements
-    const card = document.createElement('div')
-    const headline = document.createElement ('')
-    const authorPhoto = document.createElement('')
-    const authorName = document.createElement('')
-    // element structure 
-    articlesArray.appendChild()
-    articlesArray.appendChild()
-    articlesArray.appendChild()
-    articlesArray.appendChild()
     
-
+    // element structure 
+    )
     // setting the styles
 
-    cardData.classList.add('card')
-    headline.classList.add('headline')
-    author.classList.add('author')
-    img.classList.add('img-container')
-    by.classList.add('By')
+    
+
+   
 
     return card 
 
