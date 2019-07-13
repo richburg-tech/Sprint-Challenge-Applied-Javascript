@@ -10,24 +10,26 @@
 
 function Tab(topic){
     
-    
-    
+    const tab = document.createElement ('div')
+    tab.classList.add('tab')
+    tab.textContent = topic 
 
-    // const createTabs = document.querySelector('.tabs')
-    // console.log('Yooo', createTabs)
-     
-    //    .then((data) =>{
-    //     // gives results from the server
-    //     console.log('response', data)
-    //     let tabs = data.data
-    //     console.log('Yooo', tabs)
-    //     const element =createTabs(topics)
-    //     console.log('Rip Nip the Great', tabs)
-    //     tabs.appendChild(element)
-    //    })
-    
-    //    .catch((error) => {
-    //        console.log('Error', error);
-    //    })
+    return tab; 
     
 }
+
+const topics = document.querySelector('.topics')
+
+axios
+  .get('https://lambda-times-backend.herokuapp.com/topics')
+  .then(response => {
+    console.log(response)
+    response.data.topics.forEach(articleTopic => {
+    console.log(articleTopic)
+    topics.appendChild(Tab(articleTopic))
+    })
+})
+
+.catch(error => console.log(`Axios error: $error}`))
+
+
